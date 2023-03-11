@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CRUDS SYSTEM</title>
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/all.min.css">
+      <!-- font google  -->
+      <link rel="stylesheet" href="">
+
+</head>
+<body>
+      <!-- Start Header  -->
+      <header class="header">
+            <div class="container">
+                  <div class="titleProject">
+                        <h1>CRUDS SYSTEM</h1>
+                  </div>
+            </div>
+      </header>
+      <!-- End Header  -->
+
+      <!-- Start Main  -->
+
+      <!-- Start Section Cruds  -->
+        <section class="product mt-5 mb-5">
+           <div class="container">
+                  <h2>Create Product</h2>
+                  <hr>
+                  <input type="text" class="form-control mb-4" id="productName" placeholder="Product Name">
+                  <div class="priceCount">
+                        <input onkeyup="getTotal()" type="number" class="form-control mb-4 w-25" id="productPrice" placeholder="Product Price">
+                        <input onkeyup="getTotal()" type="number" class="form-control mb-4 w-25" id="productCount" placeholder="Product Count">
+                        <label id="labelTotal" style="cursor: auto; width: 10% !important;" class="btn btn-primary mb-4">Total:</label>
+                        <input type="text" class="form-control mb-4 w-25" id="productsTotal" placeholder="Total Product">
+
+                  </div>
+
+                  <input type="text" class="form-control mb-4" id="productCategory" placeholder="Product Category">
+
+                  <input type="text" class="form-control mb-4" id="productDescription" placeholder="Product Description">
+
+                  <button id="addProducts" onclick="addProduct()" disabled  class="btn btn-info mt-2">Add Product </button>
+                  <button id="btnDeleteAll" class="btn btn-danger mt-2" onclick="deleteAll()"> Delete All </button>
+                  <button class="btn btn-secondary mt-2" > Cancel </button>
+
+                  
+                  <div class="searchBy">
+                        <select class="form-select w-50 mx-auto" aria-label="Default select example" id="selectSearch">
+                              <option selected>Choose Search By?</option>
+                              <option id="searchTitle" value="1">Search By Title</option>
+                              <option id="searchCategory" value="2">Search By Category</option>
+                        </select>
+
+                  <input onkeyup="searchProdduct(this.value)" type="text" class="w-50 form-control mx-auto " id="search" placeholder="Search Prodduct....">
+
+                  </div>
+
+                    
+                  <table class="table mt-5 mb-5 text-center table-bordered ">
+                        <thead class="bg-dark text-white">
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>Price</th>
+                              <th>Category</th>
+                              <th>Description</th>
+                              <th>Delete</th>
+                              <th>Edit</th>
+                              <th>Count</th>
+
+                        </thead>
+                        <tbody id="tBody" class="">
+
+                        </tbody>
+                        <tfoot id="tFoot">
+
+
+                        </tfoot>
+                  </table>
+
+
+
+           </div>
+           <div>.</div>
+
+
+      </section>
+
+      <!-- End Section Cruds  -->
+
+      <!-- End Main  -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- font awesome  -->
+      <script src="js/all.min.js"></script>
+      <script src="js/main.js"></script>
+</body>
+</html>
